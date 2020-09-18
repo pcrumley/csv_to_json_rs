@@ -47,7 +47,7 @@ or return and error to the caller.
 5) ???
 
 ## Dependencies:
-[csv](https://docs.rs/csv) -- for csv parsing
-[serde_json](https://docs.serde.rs/serde_json/) -- for JSON conversion and serialization.
-[Warp](https://docs.rs/warp) -- for the the HTTP stack
-[tokio](https://tokio.rs/) -- for the async runtime
+- [csv](https://docs.rs/csv) -- for csv parsing
+- [serde_json](https://docs.serde.rs/serde_json/) -- for JSON conversion and serialization.
+- [Warp](https://docs.rs/warp) -- for the the HTTP stack
+- [tokio](https://tokio.rs/) -- for the async runtime
