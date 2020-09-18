@@ -2,7 +2,7 @@
 A simple REST Post API where you can send csv and get JSON in return.
 
 This is a minimal viable product of a [Warp](https://github.com/seanmonstar/warp)-based 
-asynchronous server that takes Post requests at `/csv_to_json/` with a body containing a CSV, 
+asynchronous server that takes Post requests at `~/csv_to_json/` with a body containing a CSV, 
 and returns a JSON object. 
 
 # To run start the server locally:
