@@ -6,9 +6,10 @@ asynchronous server that takes Post requests at `~/csv_to_json/` with a body con
 and returns a JSON object. 
 
 Right now, the csv_parsing is pretty simple. It assumes the deliminator is `,`, doesn't try to 
-infer types, and that the first line of the file is a header. Violations of these assumptions 
-may return a valid JSON object but contrary to user expectations. Be warned. It also doesn't handle 
-the case when rows are different lengths than others.
+infer types, and that the first line of the file is a header. Be warned: violations of these assumptions 
+may return a valid JSON object that is contrary to user expectations. This code also doesn't handle 
+the case when rows are different lengths than others, however that is guaranteed to return an error 
+(if and only if delimiter is `,`)
 
 If the csv_parsing succeeds, the server sends a `200` status with the created JSON. If it fails, 
 the server returns an error status with JSON giving a description of the error.
@@ -18,7 +19,7 @@ the server returns an error status with JSON giving a description of the error.
 cargo run --release
 ```
 
-You can test the API by sending it post requests, e.g.:
+You can test the API by sending it post requests from a different shell, e.g.:
 ```bash
 curl --location --request POST 'localhost:3030/csv_to_json' \
 --header 'Content-Type: text/plain' \
