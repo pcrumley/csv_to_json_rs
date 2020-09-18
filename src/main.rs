@@ -116,7 +116,7 @@ async fn handle_rejection(err: Rejection) -> Result<impl Reply, Infallible> {
 mod tests {
     #[test]
     fn check_csv_parser() {
-        // this test checks that the csv_parser is workd
+        // this test checks that the csv_parser is working
         let csv = bytes::Bytes::from(&b"city,country,pop
 Boston,United States,4628910
 Austin,United States,964254"[..]);
