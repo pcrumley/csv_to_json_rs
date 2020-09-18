@@ -62,7 +62,7 @@ mod tests {
         let csv = bytes::Bytes::from(&b"city,country,pop
 Boston,United States,4628910
 Austin,United States,5999999"[..]);
-        let json = super::csv_to_json(csv);
+        let json = super::csv_to_json(csv).unwrap();
         assert_eq!(json, serde_json::from_str::<serde_json::value::Value>(
         "[
             {\"city\":\"Boston\",\"country\":\"United States\",\"pop\":\"4628910\"},
