@@ -1,0 +1,15 @@
+[package]
+name = "csv_to_json"
+version = "0.1.0"
+authors = ["Patrick Crumley <patrick.crumley@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+csv = "1.1"
+warp = "0.2"
+tokio = { version = "0.2", features = ["macros"] }
+csv = "1.1"
+bytes = "0.5"
+serde_json = "1.0"
